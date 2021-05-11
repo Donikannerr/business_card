@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_visitenkarte/main.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class BusinessCard extends StatelessWidget {
   @override
@@ -11,7 +11,7 @@ class BusinessCard extends StatelessWidget {
         preferredSize: Size.fromHeight(45),
         child: AppBar(
           centerTitle: true,
-          backgroundColor: Color.fromRGBO(204, 153, 255, 100),
+          backgroundColor: Color.fromRGBO(255, 255, 255, 0),
           title: Text("Visitenkarte"),
         ),
       ),
@@ -40,8 +40,41 @@ class BusinessCard extends StatelessWidget {
                   )
                 ],
               ),
-              Row(),
-              Row(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.ac_unit_outlined,
+                      size: 40,
+                      color: Colors.green,
+                    ),
+                    Icon(
+                      Icons.access_alarms,
+                      size: 40,
+                      color: Colors.green,
+                    ),
+                    Icon(
+                      Icons.accessible,
+                      size: 40,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    QrImage(
+                      data: "https://github.com/Donikannerr/business_card",
+                      size: 70,
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
