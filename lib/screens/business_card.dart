@@ -18,7 +18,7 @@ class BusinessCard extends StatelessWidget {
       body: Center(
         child: Container(
           color: Colors.white,
-          height: 250,
+          height: 350,
           width: 350,
           child: Column(
             children: [
@@ -70,7 +70,7 @@ class BusinessCard extends StatelessWidget {
                   children: [
                     QrImage(
                       data: "https://github.com/Donikannerr/business_card",
-                      size: 70,
+                      size: 150,
                     )
                   ],
                 ),
